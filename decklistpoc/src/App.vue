@@ -41,7 +41,7 @@ const myDecklist = `4 Lightning Bolt
 
 <template>
   <div v-if="loadTime !== null">
-    We loaded all these images in {{ loadTime }} ms
+    <h2>We loaded all these images in {{ loadTime }} ms</h2>
   </div>
   <br /><br />
   <div class="wrapper">
