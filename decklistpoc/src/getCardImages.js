@@ -2,6 +2,7 @@ export async function getRichDecklistFromPlaintext(decklist) {
   const lines = decklist.split('\n');
   const richDecklist = [];
   for (let line of lines) {
+    await new Promise(resolve => setTimeout(resolve, 100));
     const match = line.match(/^\s*(\d+)\s*x?\s+(.+)$/);
     const cardname = match ? match[2].trim() : line.trim();
     const response = await fetch(`https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardname)}`);
